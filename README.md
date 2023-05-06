@@ -14,4 +14,5 @@ setum up sendara og viðtakara og netsendara
 
 <h2>vika 1</h2>
 1 lazertag bisa tilbúin nema að teingja esp32 við baterí 
+
 ![mind](https://user-images.githubusercontent.com/63102077/236629069-d13901eb-bc03-47a6-975d-a007f177931a.jpg)

@@ -1,0 +1,142 @@
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+#include <SPI.h>
+#include <MFRC522.h>
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define DISABLE_CODE_FOR_RECEIVER // Disables restarting receiver after each send. Saves 450 bytes program memory and 269 bytes RAM if receiving functions are not used.
+//#define SEND_PWM_BY_TIMER         // Disable carrier PWM generation in software and use (restricted) hardware PWM.
+//#define USE_NO_SEND_PWM           // Use no carrier PWM, just simulate an active low receiver signal. Overrides SEND_PWM_BY_TIMER definition
+
+#include "PinDefinitionsAndMore.h" // Define macros for input and output pin etc.
+#include <IRremote.hpp>
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+//const int SEND_PIN = 3;
+
+const int BUTTON_PIN = 2;
+const int RST_PIN = 5;
+const int SS_PIN = 10;
+const int BUZZER_PIN = 4;
+
+bool buttonState = HIGH;
+bool lastButtonState = HIGH;
+
+int number = 30;
+bool resetRequested = false;
+unsigned long resetTime = 0;
+const unsigned long resetDelay = 1000;  // Delay in milliseconds before number resets (adjust as needed)
+
+MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
+
+void setup() {
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(BUZZER_PIN, OUTPUT);
+  
+  digitalWrite(BUZZER_PIN, LOW);
+
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(SCREEN_WIDTH - 30, 0);
+  display.println(number);
+  display.display();
+
+  Serial.begin(9600);  // Initialize serial communications
+  SPI.begin();         // Initialize SPI bus
+  mfrc522.PCD_Init();  // Initialize MFRC522 card
+
+  Serial.println("Scan your RFID tag...");
+      // Just to know which program is running on my Arduino
+    Serial.println(F("START " __FILE__ " from " __DATE__ "\r\nUsing library version " VERSION_IRREMOTE));
+    Serial.print(F("Send IR signals at pin "));
+    Serial.println(IR_SEND_PIN);
+
+    /*
+     * The IR library setup. That's all!
+     */
+//    IrSender.begin(); // Start with IR_SEND_PIN as send pin and if NO_LED_FEEDBACK_CODE is NOT defined, enable feedback LED at default feedback LED pin
+    IrSender.begin(DISABLE_LED_FEEDBACK); // Start with IR_SEND_PIN as send pin and disable feedback LED at default feedback LED pin
+}
+
+
+uint8_t sCommand = 0x34;
+uint8_t sRepeats = 0;
+
+
+void loop() {
+  buttonState = digitalRead(BUTTON_PIN);
+
+  //Serial.println(bitRead(PORTD,3)); //Reads bit 3 of register PORTD which contains the current state (high/low) of pin 3.
+
+
+
+  if (buttonState != lastButtonState) {
+    if (buttonState == LOW) {
+      if (number > 0) {
+                    // turn LED on:
+          /*
+           * Print current send values
+           */
+          digitalWrite(BUZZER_PIN, HIGH);
+          number--;
+          Serial.println();
+          Serial.print(F("Send now: address=0x00, command=0x"));
+          Serial.print(sCommand, HEX);
+          Serial.print(F(", repeats="));
+          Serial.print(sRepeats);
+          Serial.println();
+      
+          Serial.println(F("Send standard NEC with 8 bit address"));
+          Serial.flush();
+      
+          // Receiver output for the first loop must be: Protocol=NEC Address=0x102 Command=0x34 Raw-Data=0xCB340102 (32 bits)
+          IrSender.sendNEC(0x00, sCommand, sRepeats);
+      
+          /*
+           * Increment send values
+           */
+          sCommand += 0x11;
+          sRepeats++;
+          // clip repeats at 4
+          if (sRepeats > 4) {
+              sRepeats = 4;
+          }            
+        delay(500);
+        digitalWrite(BUZZER_PIN, LOW);
+        //delay(5000);  // delay must be greater than 5 ms (RECORD_GAP_MICROS), otherwise the receiver sees it as one long signal
+
+        
+      }
+      display.clearDisplay();
+      display.setTextSize(2);
+      display.setTextColor(WHITE);
+      display.setCursor(SCREEN_WIDTH - 30, 0);
+      display.println(number);
+      display.display();
+    }
+  }
+
+  if (resetRequested && millis() - resetTime >= resetDelay) {
+    resetRequested = false;
+    number = 30;
+    display.clearDisplay();
+    display.setTextSize(2);
+    display.setTextColor(WHITE);
+    display.setCursor(SCREEN_WIDTH - 30, 0);
+    display.println(number);
+    display.display();
+  }
+
+  if (mfrc522.PICC_IsNewCardPresent() && mfrc522.PICC_ReadCardSerial()) {
+    resetRequested = true;
+    resetTime = millis();
+    mfrc522.PICC_HaltA();         // Halt card
+    mfrc522.PCD_StopCrypto1();    // Stop encryption on PCD
+  }
+  lastButtonState = buttonState;
+}

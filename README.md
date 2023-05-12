@@ -52,3 +52,16 @@ Svo lentum við í vandamálum með að Infared Transmitterinn senti signal sem 
 Svo lentum við í vandamálum með það þegar við vorum að hýsa lífin á vefsíðu vegna þess að víst það má ekki breyta einhverju fyrir utan def með def, við löguðum þetta með global variable.
 
 Annað vandamál sem við lentum í var þegar við ætluðum að nota laser transmitter en laserinn var ekki nógu sterkur og recieverinn átti erfitt með að fá skynjun, áváðum að skipta yfir í IR Transmitter
+
+
+Heimildir:
+Við notuðum aðallega gamla kóða sem við notuðum í verkefnum áfangans og sameinuðum þá
+
+https://www.thegeekpub.com/wiki/sensor-wiki-ky-005-infrared-ir-transmitter/
+
+https://www.thingiverse.com/thing:4207521
+
+https://www.keyestudio.com/products/free-shipping-keyestudio-digital-ir-infrared-transmitter-transmit-module-for-arduino
+
+https://wiki.keyestudio.com/Ks0027_keyestudio_Digital_IR_Transmitter_Module
+

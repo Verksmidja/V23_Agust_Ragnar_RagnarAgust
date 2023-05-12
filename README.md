@@ -30,3 +30,20 @@ setum up sendara og viðtakara og netsendara
 1 lazertag bisa tilbúin nema að teingja esp32 við baterí 
 
 ![mind](https://user-images.githubusercontent.com/63102077/236629069-d13901eb-bc03-47a6-975d-a007f177931a.jpg)
+
+
+
+<h2>vika 3</h2>
+
+
+
+
+
+
+Hönnunar vandamál
+
+Við lentum í vandamálum við að tengja batterí við ESP32, flest allar ESP32 útgáfur höfðu vin pinna til að tengja batterí en ekki okkar, við þurftum að nota rafbanka sem orkugjafa.
+
+Svo lentum við í vandamálum með að Infared Transmitterinn senti signal sem hélt áfram að skoppa af borðum/gólfum og skjóta sig sjálfann.
+
+Svo lentum við í vandamálum með það þegar við vorum að hýsa lífin á vefsíðu vegna þess að víst það má ekki breyta einhverju fyrir utan def með def, við löguðum þetta með global variable.

@@ -17,7 +17,7 @@ Við ákváðum að gera Lazer-Tag byssur með infared Transmitter/Reciever. Ger
 
 <h2>vika 1</h2>
 
-3d prentuðum lazertag bisu
+3d prentuðum lazertag byssa
 ![mind](https://user-images.githubusercontent.com/63102077/235329521-c8433173-eeb9-4f13-9ffa-13eac5214758.jpg)
 
 
@@ -34,8 +34,8 @@ setum up sendara og viðtakara og netsendara
 
 
 <h2>vika 3</h2>
-byssa
-![mind](https://github.com/gitmaus1/verksmidja_lokaverk_laser_tag/assets/63102077/aa68c90f-3246-4edb-bfa5-1d1023860ebb)
+byssa tilbúin
+![mind](https://github-production-user-asset-6210df.s3.amazonaws.com/63102077/238032265-aa68c90f-3246-4edb-bfa5-1d1023860ebb.jpg)
 
 
 

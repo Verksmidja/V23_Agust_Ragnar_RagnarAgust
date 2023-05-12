@@ -35,6 +35,8 @@ setum up sendara og viðtakara og netsendara
 
 <h2>vika 3</h2>
 byssa tilbúin
+
+
 ![mind](https://github-production-user-asset-6210df.s3.amazonaws.com/63102077/238032265-aa68c90f-3246-4edb-bfa5-1d1023860ebb.jpg)
 
 

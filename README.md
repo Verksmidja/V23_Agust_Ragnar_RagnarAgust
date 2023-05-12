@@ -1,5 +1,5 @@
 # verksmidja_lokaverk_laser_tag
-laser_tag er með kóða fyrir sendara, led skjá, skot tejara og skinjara
+laser-tag er með kóða fyrir IR Transmitter, OLED, RFID og IR reciever
 
 lokaverkið er með viðtakara og sendir á net
 
@@ -17,24 +17,24 @@ Við ákváðum að gera Lazer-Tag byssur með infared Transmitter/Reciever. Ger
 
 <h2>vika 1</h2>
 
-3d prentuðum lazertag byssa
+3d prentuðum lazer-tag byssur
 ![mind](https://user-images.githubusercontent.com/63102077/235329521-c8433173-eeb9-4f13-9ffa-13eac5214758.jpg)
 
 
-gerðum skana og skoteljara
+gerðum OLED sem sýnir hversu mörg skot eru eftir og RFID til að endurhlaða byssurnar
 ![mind](https://user-images.githubusercontent.com/63102077/235330336-ba438d47-d745-4091-befb-068961b51f2d.jpg)
 setum up sendara og viðtakara og netsendara
 ![mind](https://user-images.githubusercontent.com/63102077/235330340-b18242d6-cde4-4053-9676-e37b72d659a6.jpg)
 
 <h2>vika 2</h2>
-1 lazertag bisa tilbúin nema að teingja esp32 við baterí 
+1 lazer-tag byssa nánast tilbúin nema þarf að tengja ESP32 við batterí 
 
 ![mind](https://user-images.githubusercontent.com/63102077/236629069-d13901eb-bc03-47a6-975d-a007f177931a.jpg)
 
 
 
 <h2>vika 3</h2>
-byssa tilbúin
+Byssurnar tilbúnar
 
 
 ![mind](https://github-production-user-asset-6210df.s3.amazonaws.com/63102077/238032265-aa68c90f-3246-4edb-bfa5-1d1023860ebb.jpg)

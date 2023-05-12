@@ -64,5 +64,11 @@ https://www.thingiverse.com/thing:4207521
 
 https://www.keyestudio.com/products/free-shipping-keyestudio-digital-ir-infrared-transmitter-transmit-module-for-arduino
 
+
+https://user-images.githubusercontent.com/63102077/238042465-c2b0df4c-e7b6-40fe-a491-3c5dc8f46c96.png
+
 https://wiki.keyestudio.com/Ks0027_keyestudio_Digital_IR_Transmitter_Module
 
+<h2>kerfisskýringarmynd</h2>
+
+![mind](https://user-images.githubusercontent.com/63102077/238042465-c2b0df4c-e7b6-40fe-a491-3c5dc8f46c96.png)

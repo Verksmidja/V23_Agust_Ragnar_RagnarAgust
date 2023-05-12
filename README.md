@@ -54,7 +54,8 @@ Svo lentum við í vandamálum með það þegar við vorum að hýsa lífin á 
 Annað vandamál sem við lentum í var þegar við ætluðum að nota laser transmitter en laserinn var ekki nógu sterkur og recieverinn átti erfitt með að fá skynjun, áváðum að skipta yfir í IR Transmitter
 
 
-Heimildir:
+<h2>Heimildir:</h2>
+
 Við notuðum aðallega gamla kóða sem við notuðum í verkefnum áfangans og sameinuðum þá
 
 https://www.thegeekpub.com/wiki/sensor-wiki-ky-005-infrared-ir-transmitter/

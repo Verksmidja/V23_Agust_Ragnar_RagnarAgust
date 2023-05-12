@@ -50,3 +50,5 @@ Við lentum í vandamálum við að tengja batterí við ESP32, flest allar ESP3
 Svo lentum við í vandamálum með að Infared Transmitterinn senti signal sem hélt áfram að skoppa af borðum/gólfum og skjóta sig sjálfann.
 
 Svo lentum við í vandamálum með það þegar við vorum að hýsa lífin á vefsíðu vegna þess að víst það má ekki breyta einhverju fyrir utan def með def, við löguðum þetta með global variable.
+
+Annað vandamál sem við lentum í var þegar við ætluðum að nota laser transmitter en laserinn var ekki nógu sterkur og recieverinn átti erfitt með að fá skynjun, áváðum að skipta yfir í IR Transmitter

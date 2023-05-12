@@ -77,7 +77,7 @@ https://wiki.keyestudio.com/Ks0027_keyestudio_Digital_IR_Transmitter_Module
 
 <h1>video</h1>
 
-![video](https://youtube.com/shorts/ZI9RjLVNbVE)
+
 
 https://youtube.com/shorts/ZI9RjLVNbVE
 

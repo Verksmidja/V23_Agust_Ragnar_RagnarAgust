@@ -34,7 +34,8 @@ setum up sendara og viðtakara og netsendara
 
 
 <h2>vika 3</h2>
-
+byssa
+![mind](https://github.com/gitmaus1/verksmidja_lokaverk_laser_tag/assets/63102077/aa68c90f-3246-4edb-bfa5-1d1023860ebb)
 
 
 

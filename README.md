@@ -1,5 +1,7 @@
 # verksmidja_lokaverk_laser_tag
-laser_tag
+laser_tag er með koða fyrir sendara led skja og skot tejara og skinjara
+lokaverk9 er með veðtakara og sendir á net
+lokaverk_net_1.py er netcodi
 
 
 <h2>Verkefnalýsing</h2>

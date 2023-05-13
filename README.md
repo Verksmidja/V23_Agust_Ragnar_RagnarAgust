@@ -83,5 +83,23 @@ https://youtube.com/shorts/ZI9RjLVNbVE
 
 https://youtube.com/shorts/TegnResYUGM
 
+<h2>Efnislisti</h2>
+
+•    2 Arduino
+•    Raspberry pi
+•    2 ESP32
+•    2 RFID-RC522
+•    2 Keyestudio Infared Transmitter
+•    2 Keyestudio Infared Reciever
+•    2 Lazer-Tag byssur
+•    2 9V batterí
+•    2 Hleðslubankar
+•    2 Takkar
+•    2 On/Off Takkar
+•    4 Mini brauðbretti
+•    Vírar
+•    6 LED perur 
+
+
 
 

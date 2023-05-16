@@ -1,10 +1,11 @@
-# verksmidja_lokaverk_laser_tag
-laser-tag er með kóða fyrir IR Transmitter, OLED, RFID og IR reciever
+# Lasertag
+_Ágúst, Ragnar, Ragnar Ágúst._
 
-lokaverkið er með viðtakara og sendir á net
+- laser-tag er með kóða fyrir IR Transmitter, OLED, RFID og IR reciever
+- lokaverkið er með viðtakara og sendir á net
+- lokaverk_net_1.py er netcodi
 
-lokaverk_net_1.py er netcodi
-
+---
 
 <h2>Verkefnalýsing</h2>
 
